@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/lucasrpatten/repo-search/issues"
   },
-  "homepage": "https://github.com/lucasrpatten/repo-search#readme"
+  "homepage": "https://github.com/lucasrpatten/repo-search#readme",
+  "devDependencies": {
+    "jquery": "^3.6.0"
+  }
 }

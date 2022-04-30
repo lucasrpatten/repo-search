@@ -1,0 +1,12 @@
+#star-range input{
+    border-radius:7px;
+}
+
+#language {
+    position: inherit;
+    margin-top:100px;
+}
+
+#language select {
+    width: 100px;
+}
