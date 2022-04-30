@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import App from './App.js';
 import { HashRouter, Routes, Route } from "react-router-dom";
+
 
 ReactDOM.render(
     <React.StrictMode>
     <HashRouter>
     <Routes>
     <Route path="/" element={<App/>} />
-    <Routes>
+    </Routes>
     </HashRouter>
-    </React.StrictMode>
-
+    </React.StrictMode>,
     document.getElementById('app'));

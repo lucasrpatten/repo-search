@@ -28,22 +28,24 @@
   "bugs": {
     "url": "https://github.com/lucasrpatten/repo-search/issues"
   },
-  "homepage": "https://github.com/lucasrpatten/repo-search#readme",
+  "homepage": "https://lucasrpatten.github.io/repo-search/",
   "dependencies": {
-    "@babel/core": "^7.17.10",
-    "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.5",
     "babel-preset-env": "^1.7.0",
     "html-webpack-plugin": "^5.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
+    "style-loader": "^3.3.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
     "webpack": "^5.72.0"
   }
 }
