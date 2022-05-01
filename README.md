@@ -13,19 +13,10 @@ Run the following commands :</br>
 `git clone https://github.com/lucasrpatten/repo-search.git`</br>
 `cd repo-search`
 ___
-**To work on the flask (python) backend of the app, run**</br>
-`cd server`</br>
-`pip3 install virtualenv` or `python3 -m pip install virtualenv`</br>
-`python3 -m venv venv`</br>
-`source venv/bin/activate`</br>
-`pip install requirements.txt`</br>
-Once you reach this point, you have your virtualenv setup. You are now free to edit the python server files.</br>
-**To run the flask server (after building from the js half)** `bash startserver.sh`
-___
-**To work on react (js) frontend of the app, run**</br>
+**To work on the frontend (react)**</br>
 `cd static`</br>
 `npm i`</br>
 **Live development server**</br>
 `npm run dev`</br>
-**Build Production Server (to run with flask)**</br>
+**Build Production Server**</br>
 `npm run build`
