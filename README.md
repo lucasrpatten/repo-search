@@ -20,3 +20,11 @@ ___
 `npm run dev`</br>
 **Build Production Server**</br>
 `npm run build`
+___
+**To work on python scripts**</br>
+`cd python-scripts`</br>
+`pip3 install virtualenv`</br>
+`python3 -m venv venv`</br>
+`pip3 install requirements.txt`</br>
+
+**To contribute**
