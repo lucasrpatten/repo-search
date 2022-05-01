@@ -1,29 +1,25 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState } from 'react';
-import css from './App.css';
+import css from '../css/App.css';
 import { PageHeader } from "react-bootstrap";
 
 var $ = require('jquery');
-require('../css/App.css'):
 
 
 
 function App() {
-    const [inputs, setInputs] = useState({});
-   
-
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({...values, [name]:value}))
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert(inputs);
-    }
-
+    //current_languages = "";
+      //  $(function() {
+        //  $('.container-language button').on('click', function(e) {
+          //  e.preventDefault()
+          //  $.getJSON('/addlang',
+          //      function(data) {
+          //      current_languages = data;
+          //  });
+         //   return false;
+       //   });
+      //  });
 
     return(
         <div class="body">
@@ -51,8 +47,9 @@ function App() {
         <div class="container-language">
     
                           
-            <button id="langall" onclick = '<?PHP ECHO "Hi" ?>'>Add/Remove All</button>
-            <button id="assembly">Assembly</button>
+            <button id="langall">Add/Remove All</button>
+
+            <button id="assembly" >Assembly</button>
             <button id="bash">Bash</button>
             <button id="c">C</button>
             <button id="c++">C++</button>
