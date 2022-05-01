@@ -1,2 +1,31 @@
-# more_repo_filters
-A better search engine for finding github projects to contribute to
+# Repo-Search
+The advanced git search engine
+___
+## What is it?
+The GitHub Repo Search Engine is an engine used to find repos for those of all levels of skill - beginners and experts alike - to contribute to.
+
+## Why?
+When you are just starting programming, one of the best ways to build skills is to help on open source projects. These projects will teach you many skills that have real job application or useful program methods and implementations. Alongside this, experts will be able to help out beginners with the more technological aspects of their programs - as this engine brings to light many less advertised repos, that will now be more likely to be discoverd. With this engine, a greater diversity of repos will receive assistance, and beginners and experts alike will benefit.
+
+## Setup
+**To install the source code, open up a directory you would like the project to be installed in.**</br>
+Run the following commands :</br>
+`git clone https://github.com/lucasrpatten/repo-search.git`</br>
+`cd repo-search`
+___
+**To work on the flask (python) backend of the app, run**</br>
+`cd server`</br>
+`pip3 install virtualenv` or `python3 -m pip install virtualenv`</br>
+`python3 -m venv venv`</br>
+`source venv/bin/activate`</br>
+`pip install requirements.txt`</br>
+Once you reach this point, you have your virtualenv setup. You are now free to edit the python server files.</br>
+**To run the flask server (after building from the js half)** `bash startserver.sh`
+___
+**To work on react (js) frontend of the app, run**</br>
+`cd static`</br>
+`npm i`</br>
+**Live development server**</br>
+`npm run dev`</br>
+**Build Production Server (to run with flask)**</br>
+`npm run build`
