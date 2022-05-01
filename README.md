@@ -14,7 +14,6 @@ Run the following commands :</br>
 `cd repo-search`
 ___
 **To work on the frontend (react)**</br>
-`cd static`</br>
 `npm i`</br>
 **Live development server**</br>
 `npm run dev`</br>
