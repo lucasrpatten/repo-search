@@ -1,49 +1,85 @@
 body {
-    background-color: grey;
-    overflow: hidden; 
+  background-color: grey;
+  overflow: hidden; 
 }
 .container-main {
-    max-width: 85%;
-    width: 85%;
-    float: left;
-    height: 100vh;
-    overflow-x: scroll;
-    overflow-y: scroll; 
-    background: #EFF0F1;
+  position: absolute;
+  top: 5px;
+  width: 63%;
+  height: 100vh;
+  max-height: calc(100% - 10px);
+  overflow-x: scroll;
+  overflow-y: scroll; 
+  background: #EFF0F1;
+  margin-left: calc(0.3% + 20% + 1px);
+}
+.container-search {
+  position: absolute;
+  left: 0.3%;
+  top: 5px;
+  min-width: 120px;
+  width: 20%;
+  background: white;
+  max-height: calc(100% - 10px);
+  height: 100vh;
+  border-left: solid #57595a;
+  border-right: solid #57595a;
 }
 .container-language {
-    position: fixed;
-    right:0;
-    bottom:0;
-    min-width: 80px;
-    width: 15%;
-    float: right;
-    max-height: 90%;
-    height: 90vh;
-    overflow-x: hidden;
-    overflow-y: scroll; 
-    background: #c6c7ce;
-    -ms-overflow-style: none; /*IE and Edge no scrollbar*/
-    scrollbar-width: none; /*firefox no scrollbar*/
+  position: fixed;
+  right:0.3%;
+  top:5px;
+  min-width: 80px;
+  width: 15%;
+  max-height: calc(100% - 10px);
+  margin-bottom: 10px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll; 
+  background: #c6c7ce;
+  -ms-overflow-style: none; /*IE and Edge no scrollbar*/
+  scrollbar-width: none; /*firefox no scrollbar*/
+  border-left: solid #57595a;
+  border-right: solid #57595a;
 }
-
 /*no scrollbar Chrome, Safari and Opera*/
 .container-language::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
-.container-language button {
-    max-width: 100%;
-    min-height: 50px;
-    margin-top: 10px;
-    width: 100%;
-    height: 10%;
-    font-size: 1.2em;
-    font-weight: bold;
-    background: ;
+.langbutton {
+  float: right;
+  margin-right: 1.8%;
+  min-width: 76px;
+  min-height: 50px;
+  margin-top: 10px;
+  width: 96%;
+  height: 10%;
+  font-size: 1.2em;
+  font-weight: bold;
 }
-
 #langall {
-margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 90%;
+  height: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transaction: .2s;
+  transaction: opacity .2s;
 }
 
+.slider:hover {
+  opacity: 1; }
+
+/*webkit for chrome, safari, edge, opera - moz for firefo*/
+.slider::-webkit-slider-thumb {
+
+}
+
+.slider::-moz-range-thumb {
+
+}

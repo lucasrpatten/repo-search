@@ -2,7 +2,7 @@
   "name": "repo-search",
   "version": "1.0.0",
   "description": "A search engine for both beginners and experts to find git repos to contribute to.",
-  "main": "main.jsx",
+  "main": "js/main.jsx",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,12 +16,9 @@
     "Git",
     "GitHub",
     "Search",
-    "Git",
-    "Search",
-    "GitHub",
-    "Search",
-    "Search",
-    "Engine",
+    "Git Search",
+    "GitHub Search",
+    "Search Engine",
     "React"
   ],
   "author": "lucasrpatten",
@@ -29,10 +26,12 @@
   "bugs": {
     "url": "https://github.com/lucasrpatten/repo-search/issues"
   },
-  "homepage": "https://lucasrpatten.github.io/repo-search/",
   "devDependencies": {
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.3",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.5",
     "css-loader": "^0.28.4",

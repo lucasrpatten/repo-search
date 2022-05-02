@@ -1,15 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.jsx';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Search from './Search.jsx';
 
 
-ReactDOM.render(
-    <React.StrictMode>
-    <HashRouter>
-    <Routes>
-    <Route path="/" element={<App/>} />
-    </Routes>
-    </HashRouter>
-    </React.StrictMode>,
-    document.getElementById('app'));
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Search />}>
+
+        </Route>
+      </Routes>
+    </Router>
+  );
+
+}
+
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+  <App />
+);
+

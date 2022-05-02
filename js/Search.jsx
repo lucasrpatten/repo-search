@@ -2,18 +2,18 @@
 For documentation purposes, the comments //folds and //folde are my custom vim folding markers - feel free to ignore them.
 */
 
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom/client';
-import { useState } from 'react';
-import '../css/App.css';
+import React, { useState } from 'react';
+import {Outlet, Link} from "react-router-dom";
+import '../css/App.css';import 'rc-slider/assets/index.css';
 import { PageHeader } from "react-bootstrap";
+import { Slider } from '@mui/material';
+import StarSlider from './sliders/StarSlider.jsx';
 var $ = require('jquery');
 
 
 
-//folds App
-function App() { 
-
+//folds Main
+const Search = () => { 
   //folds javascript
   //folds updateLang
   function updateLang(dictionary, language) {
@@ -76,22 +76,33 @@ function App() {
     vimscript:0,
     xml:0}
   //folde active_languages
+ 
+  //folds sliders
+    //
+  //folde sliders
+
+  
   //folde javascript
   //folds mainhtml 
   return(
-    <div>
-
+    <>
+    <div class="container-search">
+      {/* add range sliders here
+       * for stars use non linear range w/ input
+       * https://mui.com/material-ui/react-slider/
+       */}
+    <StarSlider />
+    </div>
     <div class="container-main">
-      
     </div>
     <div class="container-language">
 
       {/*//folds languagebuttons*/}
-      <button id="langall" onClick={() => updateLang( active_languages, 'all_langs')}>All Langs</button>
+      <button id="langall" class="langbutton" onClick={() => updateLang( active_languages, 'all_langs')}>All Langs</button>
       <button class="langbutton" id="assembly" onClick={() => updateLang( active_languages, 'assembly')}>Assembly</button>
       <button onClick={() => updateLang( active_languages, 'bash')} class="langbutton" id="bash">Bash</button>
       <button onClick={() => updateLang( active_languages, 'c')} class="langbutton" id="c">C</button>
-      <button onClicklick={() => updateLang( active_languages, 'c++')} class="langbutton" id="c++">C++</button>
+      <button onClick={() => updateLang( active_languages, 'c++')} class="langbutton" id="c++">C++</button>
       <button onClick={() => updateLang( active_languages, 'c#')} class="langbutton" id="c#">C#</button>
       <button onClick={() => updateLang( active_languages, 'elixir')} class="langbutton" id="elixir">Elixir</button>
       <button onClick={() => updateLang( active_languages, 'go')} class="langbutton" id="go">Go</button>
@@ -113,11 +124,13 @@ function App() {
       <button onClick={() => updateLang( active_languages, 'vimscript')} class="langbutton" id="vimscript">VimScript</button>
       <button onClick={() => updateLang( active_languages, 'xml')} class="langbutton" id="xml">XML</button>
       {/*//folde languagebuttons*/}
-      
+     
     </div>
-    </div>);
-    //folde mainhtml
+    <Outlet />
+    </>
+  );
 }
-//folde App
-export default App;
+//folde mainhtml
+//folde Main
+export default Search;
 
