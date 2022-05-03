@@ -6,7 +6,10 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx webpack serve --mode development --open"
+    "dev": "npx webpack serve --mode development --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d bundle"
+
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   ],
   "author": "lucasrpatten",
   "license": "MIT",
+  "homepage": "https://lucasrpatten.github.io/repo-search/",
   "bugs": {
     "url": "https://github.com/lucasrpatten/repo-search/issues"
   },
@@ -37,6 +41,7 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "jquery": "^3.2.1",
     "react-bootstrap": "^0.31.0",

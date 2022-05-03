@@ -62,7 +62,10 @@ export default function StarSlider() {
 
   return (
     
-    <Box> 
+    <Box>
+      <div 
+      style = {{color: '#ccac00', 'font-size': '3.5vw',  'margin-left': 'auto', 'margin-right': 'auto', position: 'relative', left: '2.1vw'}}
+      >Star Range</div>
       <Box sx = {{ 'width':'15vw' }}>
       <Slider
 
