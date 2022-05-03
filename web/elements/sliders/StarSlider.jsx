@@ -72,14 +72,14 @@ export default function StarSlider() {
         value={value}
         onChange={handleChange}
         valueLabelDisplay="off"
-        style={{'margin-left': '2.4vw', 'margin-top': '10px', color: 'rgba(200, 200, 220, .4)', background: 'darkgrey', 'border-radius': '50px', width : '15vw', }} 
+        style={{'margin-left': '2.4vw', 'margin-top': '10px', color: 'rgba(200, 200, 220, .4)', background: 'darkgrey', 'border-radius': '50px', width : '15vw'  }} 
       />
       </Box>
       <Box>
       <LowerInput
             id={"lowerstarinput"}
             value={value[0]}
-            style={{width:'70px', position: 'absolute', right: '10vw', background: 'transparent', 'border-radius': '12px', border: 'solid 1px black', 'margin-top': '5px', 'margin-left': '10px', 'margin-right': '0px', /*remove up and down arrows later, idk how */}}
+            style={{width:'70px', position: 'absolute', right: '10vw', background: 'transparent', 'border-radius': '12px', border: 'solid 1px #706e31', 'margin-top': '5px', 'margin-left': '10px', 'margin-right': '0px', color: 'rgba(104, 235, 104, .9)', 'margin-right': '4px' /*remove up and down arrows later, idk how */}}
             onChange={lowerInputChange}
             disableUnderline
             onBlur={handleBlur}
@@ -98,7 +98,7 @@ export default function StarSlider() {
             id={"upperstarinput"}
             value={value[1]}
             disableUnderline
-            style={{width:'70px', position: 'absolute', float: 'right', left: '10vw', background: 'transparent', 'border-radius': '12px', border: 'solid 1px black', 'margin-top': '5px', 'margin-left': '0px', 'margin-right': '10px'/*remove up and down arrows later, idk how */}}
+            style={{width:'70px', position: 'absolute', float: 'right', left: '10vw', background: 'transparent', 'border-radius': '12px', border: 'solid 1px #706e31', 'margin-top': '5px', 'margin-left': '0px', 'margin-right': '10px', color: 'rgba(104, 235, 104, .9)', 'margin-left': '4px' /*remove up and down arrows later, idk how */}}
             onChange={upperInputChange}
             onBlur={handleBlur}
             inputProps={{

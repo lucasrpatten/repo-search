@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: #505356;
   overflow: hidden; 
 }
 .container-main {
@@ -10,7 +10,9 @@ body {
   max-height: calc(100% - 10px);
   overflow-x: scroll;
   overflow-y: scroll; 
-  background: #302821;
+  background: #1b1c17;
+  border-left: solid #747576;
+  border-right: solid #747576;
   margin-left: calc(0.3% + 20% + 1px);
 }
 .container-search {
@@ -19,11 +21,11 @@ body {
   top: 5px;
   min-width: 120px;
   width: 20%;
-  background: #3f3535; 
+  background: #1b1c17;
   max-height: calc(100% - 10px);
   height: 100vh;
-  border-left: solid #57595a;
-  border-right: solid #57595a;
+  border-left: solid #747576;
+  border-right: solid #747576;
 }
 .container-language {
   position: fixed;
@@ -36,11 +38,11 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll; 
-  background: #494236;
+  background: #1b1c17;
   -ms-overflow-style: none; /*IE and Edge no scrollbar*/
   scrollbar-width: none; /*firefox no scrollbar*/
-  border-left: solid #57595a;
-  border-right: solid #57595a;
+  border-left: solid #747576;
+  border-right: solid #747576;
 }
 /*no scrollbar Chrome, Safari and Opera*/
 .container-language::-webkit-scrollbar {
