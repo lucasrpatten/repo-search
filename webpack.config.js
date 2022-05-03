@@ -3,10 +3,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-   entry: __dirname + '/js/main.jsx',
+   entry: __dirname + '/web/main.jsx',
    target: "web",
    output: {
-      path: path.join(__dirname, '/dist'),
+      path: path.join(__dirname, '/bundle'),
       filename: 'bundle.js'
    },
    resolve: {
@@ -29,7 +29,7 @@ module.exports = {
    },
    plugins:[
       new HtmlWebpackPlugin({
-         template: './index.html'
+         template: './web/index.html'
       })
    ],
    mode: "development"

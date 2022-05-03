@@ -1,13 +1,14 @@
 /*
 For documentation purposes, the comments //folds and //folde are my custom vim folding markers - feel free to ignore them.
+
+On another note, I eventually want all large functions (about 15+ lines) to another file, and then imported
 */
 
 import React, { useState } from 'react';
 import {Outlet, Link} from "react-router-dom";
-import '../css/App.css';import 'rc-slider/assets/index.css';
+import '../styles/App.css';
 import { PageHeader } from "react-bootstrap";
-import { Slider } from '@mui/material';
-import StarSlider from './sliders/StarSlider.jsx';
+import StarSlider from './../elements/sliders/StarSlider.jsx'
 var $ = require('jquery');
 
 
@@ -17,37 +18,36 @@ const Search = () => {
   //folds javascript
   //folds updateLang
   function updateLang(dictionary, language) {
-    if (language == "all_langs") {
-      if (Object.values(dictionary).includes(1)) {
-        let keys = Object.keys(dictionary);
-        for (let i = 0; i < keys.length; i++) {
-          let key = keys[i]; 
-          dictionary[key]=0;
-          document.getElementById(key).style.background = "red"; 
-        }
-      }
-      else {
-        let keys = Object.keys(dictionary)
-        for (let i=0; i < keys.length; i++) {
-          let key = keys[i];
-          dictionary[key]=1;
-          document.getElementById(key).style.background = "green";
-        }
+  if (language == "all_langs") {
+    if (Object.values(dictionary).includes(1)) {
+      let keys = Object.keys(dictionary);
+      for (let i = 0; i < keys.length; i++) {
+        let key = keys[i]; 
+        dictionary[key]=0;
+        document.getElementById(key).style.background = "red"; 
       }
     }
     else {
-      if (dictionary[language] == 0) {
-        dictionary[language] = 1;
-        document.getElementById(language).style.background = "green";
-      }
-      else {
-        dictionary[language] = 0;
-        document.getElementById(language).style.background = "red";
+      let keys = Object.keys(dictionary)
+      for (let i=0; i < keys.length; i++) {
+        let key = keys[i];
+        dictionary[key]=1;
+        document.getElementById(key).style.background = "green";
       }
     }
-    active_languages = dictionary;
   }
-  //folde updateLang
+  else {
+    if (dictionary[language] == 0) {
+      dictionary[language] = 1;
+      document.getElementById(language).style.background = "green";
+    }
+    else {
+      dictionary[language] = 0;
+      document.getElementById(language).style.background = "red";
+    }
+  }
+  active_languages = dictionary;
+  } //folde updateLang
 
   //folds active_languages
   let active_languages = { 
@@ -76,7 +76,7 @@ const Search = () => {
     vimscript:0,
     xml:0}
   //folde active_languages
- 
+   
   //folds sliders
     //
   //folde sliders
@@ -91,7 +91,10 @@ const Search = () => {
        * for stars use non linear range w/ input
        * https://mui.com/material-ui/react-slider/
        */}
-    <StarSlider />
+
+    <div id="stars">
+      <StarSlider />
+    </div>
     </div>
     <div class="container-main">
     </div>

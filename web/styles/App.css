@@ -10,7 +10,7 @@ body {
   max-height: calc(100% - 10px);
   overflow-x: scroll;
   overflow-y: scroll; 
-  background: #EFF0F1;
+  background: #302821;
   margin-left: calc(0.3% + 20% + 1px);
 }
 .container-search {
@@ -19,7 +19,7 @@ body {
   top: 5px;
   min-width: 120px;
   width: 20%;
-  background: white;
+  background: #3f3535; 
   max-height: calc(100% - 10px);
   height: 100vh;
   border-left: solid #57595a;
@@ -36,7 +36,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll; 
-  background: #c6c7ce;
+  background: #494236;
   -ms-overflow-style: none; /*IE and Edge no scrollbar*/
   scrollbar-width: none; /*firefox no scrollbar*/
   border-left: solid #57595a;
@@ -58,28 +58,9 @@ body {
   font-weight: bold;
 }
 #langall {
-  margin-bottom: 20px;
-}
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 90%;
-  height: 20px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transaction: .2s;
-  transaction: opacity .2s;
+  margin-bottom: 20px#;
 }
 
-.slider:hover {
-  opacity: 1; }
-
-/*webkit for chrome, safari, edge, opera - moz for firefo*/
-.slider::-webkit-slider-thumb {
-
-}
-
-.slider::-moz-range-thumb {
-
+#stars {
+width: 200px;
 }

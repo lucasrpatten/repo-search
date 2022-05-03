@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Search from './Search.jsx';
+import Search from './pages/Search.jsx';
 
 
 export default function App() {
