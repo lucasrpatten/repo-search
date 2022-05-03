@@ -1,7 +1,8 @@
 body {
   background-color: #505356;
-  overflow: hidden; 
+  overflow: hidden;
 }
+
 .container-main {
   position: absolute;
   top: 5px;
@@ -9,7 +10,7 @@ body {
   height: 100vh;
   max-height: calc(100% - 10px);
   overflow-x: scroll;
-  overflow-y: scroll; 
+  overflow-y: scroll;
   background: #1b1c17;
   border-left: solid #747576;
   border-right: solid #747576;
@@ -29,20 +30,21 @@ body {
 }
 .container-language {
   position: fixed;
-  right:0.3%;
-  top:5px;
+  right: 0.3%;
+  top: 5px;
   min-width: 80px;
   width: 15%;
   max-height: calc(100% - 10px);
   margin-bottom: 10px;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll; 
+  overflow-y: scroll;
   background: #1b1c17;
   -ms-overflow-style: none; /*IE and Edge no scrollbar*/
   scrollbar-width: none; /*firefox no scrollbar*/
   border-left: solid #747576;
   border-right: solid #747576;
+  cursor: cell;
 }
 /*no scrollbar Chrome, Safari and Opera*/
 .container-language::-webkit-scrollbar {
@@ -58,11 +60,22 @@ body {
   height: 10%;
   font-size: 1.2em;
   font-weight: bold;
+  background-color: rgba(120, 120, 120, 0.2);
+  color: rgb(225, 152, 10);
+  border: 1px solid #696969;
+  text-shadow: -1px 1px 5px black;
+  cursor: cell;
+}
+
+.langbutton:hover {
+  font-size: 1.5em;
+  border: 2px solid #979796;
 }
 #langall {
-  margin-bottom: 20px#;
+  margin-bottom: 20px;
+  background-color: rgba(150, 150, 150, 0.7);
 }
 
 #stars {
-width: 200px;
+  width: 200px;
 }
