@@ -45,6 +45,7 @@ body {
   border-left: solid #747576;
   border-right: solid #747576;
   cursor: cell;
+  user-select: none;
 }
 /*no scrollbar Chrome, Safari and Opera*/
 .container-language::-webkit-scrollbar {
@@ -65,6 +66,7 @@ body {
   border: 1px solid #696969;
   text-shadow: -1px 1px 5px black;
   cursor: cell;
+  user-select: none;
 }
 
 .langbutton:hover {

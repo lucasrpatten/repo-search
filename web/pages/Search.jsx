@@ -8,7 +8,8 @@ import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "../styles/App.css";
 import { PageHeader } from "react-bootstrap";
-import StarSlider from "./../elements/sliders/StarSlider.jsx";
+import StarSlider from "./../elements/StarSlider.jsx";
+import ForkInput from "./../elements/ForkInput.jsx";
 var $ = require("jquery");
 
 //folds Main
@@ -74,23 +75,14 @@ const Search = () => {
     "xml": 1,
   };
   //folde active_languages
-
-  //folds sliders
-  //
-  //folde sliders
-
   //folde javascript
   //folds mainhtml
   return (
     <>
       <div class="container-search">
-        {/* add range sliders here
-         * for stars use non linear range w/ input
-         * https://mui.com/material-ui/react-slider/
-         */}
-
         <div id="stars">
           <StarSlider />
+          <ForkInput />
         </div>
       </div>
       <div class="container-main"></div>

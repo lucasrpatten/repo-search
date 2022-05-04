@@ -26,7 +26,6 @@ export default function StarSlider() {
   const [value, setValue] = React.useState([0, 110000]);
 
   const handleChange = (event, newValue) => {
-    console.log(newValue);
     if (newValue[0] != value[0]) {
       newValue[0] = Math.round(1.000105535 ** newValue[0]);
 
@@ -58,7 +57,7 @@ export default function StarSlider() {
     <Box>
       <div
         style={{
-          "color": "#ccac00",
+          "color": "#ecd347",
           "font-size": "3.5vw",
           "margin-left": "auto",
           "margin-right": "auto",
