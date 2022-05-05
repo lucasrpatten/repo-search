@@ -10,13 +10,6 @@ function valuetext(value) {
   return `${value}`;
 }
 
-const UpperInput = styled(MuiInput)`
-  width: 42px;
-`;
-
-const LowerInput = styled(MuiInput)`
-  width: 42px;
-`;
 
 function calcValue(value) {
   return Math.round(1.000105535 ** value);
@@ -59,8 +52,8 @@ export default function StarSlider() {
         style={{
           "color": "#ecd347",
           "font-size": "3.5vw",
-          "margin-left": "auto",
-          "margin-right": "auto",
+          "marginLeft": "auto",
+          "marginRight": "auto",
           "position": "relative",
           "left": "2.1vw",
         }}
@@ -76,8 +69,8 @@ export default function StarSlider() {
           onChange={handleChange}
           valueLabelDisplay="off"
           style={{
-            "margin-left": "2.4vw",
-            "margin-top": "10px",
+            "marginLeft": "2.4vw",
+            "marginTop": "10px",
             "color": "rgba(200, 200, 220, .4)",
             "background": "darkgrey",
             "border-radius": "50px",
@@ -86,7 +79,7 @@ export default function StarSlider() {
         />
       </Box>
       <Box>
-        <LowerInput
+        <MuiInput
           id={"lowerstarinput"}
           value={value[0]}
           style={{
@@ -94,13 +87,13 @@ export default function StarSlider() {
             "position": "absolute",
             "right": "10vw",
             "background": "transparent",
-            "border-radius": "12px",
+            "borderRadius": "12px",
             "border": "solid 1px #706e31",
-            "margin-top": "5px",
-            "margin-left": "10px",
-            "margin-right": "0px",
+            "marginTop": "5px",
+            "marginLeft": "10px",
+            "marginRight": "0px",
             "color": "rgba(104, 235, 104, .9)",
-            "margin-right": "4px" /*remove up and down arrows later, idk how */,
+            "marginRight": "4px" /*remove up and down arrows later, idk how */,
           }}
           onChange={lowerInputChange}
           disableUnderline
@@ -116,7 +109,7 @@ export default function StarSlider() {
         {/* https://mui.com/system/the-sx-prop up and down arrows?*/}
       </Box>
       <Box>
-        <UpperInput
+        <MuiInput
           id={"upperstarinput"}
           value={value[1]}
           disableUnderline
@@ -126,13 +119,13 @@ export default function StarSlider() {
             "float": "right",
             "left": "10vw",
             "background": "transparent",
-            "border-radius": "12px",
+            "borderRadius": "12px",
             "border": "solid 1px #706e31",
-            "margin-top": "5px",
-            "margin-left": "0px",
+            "marginTop": "5px",
+            "marginLeft": "0px",
             "margin-right": "10px",
             "color": "rgba(104, 235, 104, .9)",
-            "margin-left": "4px" /*remove up and down arrows later, idk how */,
+            "marginLeft": "4px" /*remove up and down arrows later, idk how */,
           }}
           onChange={upperInputChange}
           onBlur={handleBlur}

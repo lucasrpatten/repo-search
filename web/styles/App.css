@@ -1,7 +1,9 @@
 body {
   background-color: #505356;
-  overflow: hidden;
+  overflow: hidden; 
 }
+
+
 
 .container-main {
   position: absolute;
@@ -27,6 +29,13 @@ body {
   height: 100vh;
   border-left: solid #747576;
   border-right: solid #747576;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.container-search::-webkit-scrollbar {
+display: none;
 }
 .container-language {
   position: fixed;

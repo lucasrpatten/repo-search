@@ -3,7 +3,7 @@ For documentation purposes, the comments //folds and //folde are my custom vim f
 
 On another note, I eventually want all large functions (about 15+ lines) to another file, and then imported
 */
-
+//folds imports
 import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "../styles/App.css";
@@ -11,9 +11,11 @@ import { PageHeader } from "react-bootstrap";
 import StarSlider from "./../elements/StarSlider.jsx";
 import ForkInput from "./../elements/ForkInput.jsx";
 var $ = require("jquery");
-
+//folde
 //folds Main
 const Search = () => {
+  // todo - add a function to warn the user if the window is to small (less than 720px)
+
   //folds javascript
   //folds updateLang
   function updateLang(dictionary, language) {
