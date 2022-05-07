@@ -22,6 +22,11 @@ todo</br></br>
 ___
 todo</br></br>
 ## Exceptions
-Sometimes while naming something, you may encounter an obstacle, or feel a different naming style would be better for this specific situation. Just use your best judgement if you feel that a, in a specific case, the naming schemes shouldn't apply - these conventions are for ease of reading, programming, and additions by others. However, as long as you feel a different name fits this, and would be better with a different convention -- Go for it.
+Sometimes while naming something, you may encounter an obstacle, or feel a different naming style would be better for this specific situation. Just use your best judgement if you feel that a, in a specific case, the naming schemes shouldn't apply - these conventions are for ease of reading, programming, and additions by others. However, as long as you feel a different name fits this, and would be better with a different convention -- Go for it.<br>
+<br>
+
+## Automations
+Some automations have been created to check and fix your formatting or conventions. Read about these [here][2].
 
 [1]: #exceptions
+[2]: automations.md
