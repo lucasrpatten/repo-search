@@ -1,9 +1,7 @@
 body {
   background-color: #505356;
-  overflow: hidden; 
+  overflow: hidden;
 }
-
-
 
 .container-main {
   position: absolute;
@@ -18,6 +16,7 @@ body {
   border-right: solid #747576;
   margin-left: calc(0.3% + 20% + 1px);
 }
+
 .container-search {
   position: absolute;
   left: 0.3%;
@@ -35,8 +34,9 @@ body {
   scrollbar-width: none;
 }
 .container-search::-webkit-scrollbar {
-display: none;
+  display: none;
 }
+
 .container-language {
   position: fixed;
   right: 0.3%;
@@ -56,10 +56,12 @@ display: none;
   cursor: cell;
   user-select: none;
 }
+
 /*no scrollbar Chrome, Safari and Opera*/
 .container-language::-webkit-scrollbar {
   display: none;
 }
+
 .langbutton {
   float: right;
   margin-right: 1.8%;
@@ -76,12 +78,14 @@ display: none;
   text-shadow: -1px 1px 5px black;
   cursor: cell;
   user-select: none;
+  border-radius: 3px;
 }
 
 .langbutton:hover {
   font-size: 1.5em;
   border: 2px solid #979796;
 }
+
 #langall {
   margin-bottom: 20px;
   background-color: rgba(150, 150, 150, 0.7);
@@ -89,4 +93,42 @@ display: none;
 
 #stars {
   width: 200px;
+}
+
+#submitsearch {
+  width: 12vw;
+  height: 4vw;
+  border-radius: 30px;
+  border: none;
+  position: absolute;
+  right: 2.5vw;
+  bottom: 1vw;
+  box-shadow: 0 0 10px 2px #61688b;
+  background: radial-gradient(#76cbfe 0%, #48c6ef 100%);
+  transition-duration: 0.4s;
+  color: #f7a748;
+  text-shadow: 0 0 2px black;
+  font-size: 2vw;
+}
+
+#submitsearch:hover {
+  box-shadow: 0 0 30px 3px #1b2247;
+  transition-duration: 0.4s;
+  background: radial-gradient(#76cbfe 0%, #48c6ef 100%);
+  cursor: pointer;
+}
+
+#submitsearch:active {
+  animation: createBox 1s;
+  animation-iteration-count: 1;
+  transition-duration: 0.3s;
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
 }

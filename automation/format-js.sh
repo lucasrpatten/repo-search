@@ -1,0 +1,15 @@
+#!/bin/bash
+cd ..
+npx prettier --check .
+echo "Are there files to fix, and if so, would you like to do it automatically? (y/n)"
+read
+if [ "$REPLY" == "yes" ] || [ "$REPLY" == "y" ]
+then
+  npx prettier --write *
+elif [ "$REPLY" == "no" ] || [ "$REPLY" == "n" ]
+then
+  echo "Alright gottit bruh I won't fix it for you then fine"
+else
+  echo "Input Error - Allowed inputs are yes, no, y, and n"
+fi
+cd automation

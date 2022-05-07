@@ -10,13 +10,16 @@ import "../styles/App.css";
 import { PageHeader } from "react-bootstrap";
 import StarSlider from "./../elements/StarSlider.jsx";
 import ForkInput from "./../elements/ForkInput.jsx";
-var $ = require("jquery");
+const $ = require("jquery");
+
 //folde
 //folds Main
 const Search = () => {
   // todo - add a function to warn the user if the window is to small (less than 720px)
 
-  //folds javascript
+  //folds javascripti
+  const [starRange, updateStarRange] = useState(0, 110000);
+  const [forks, updateForks] = useState(0, 10000);
   //folds updateLang
   function updateLang(dictionary, language) {
     if (language == "all_langs") {
@@ -48,7 +51,28 @@ const Search = () => {
     }
     active_languages = dictionary;
   } //folde updateLang
+  //folds handleSearch
+  const handleSearch = () => {
+    let selectedLangs = [];
+    (function () {
+      let values = Object.values(active_languages);
+      let keys = Object.keys(active_languages);
+      for (let i = 0; i < values.length; i++) {
+        let value = values[i];
+        if (value == 1) {
+          selectedLangs.push(keys[i]);
+        }
+      }
+    })();
 
+    let lowerStars = document.getElementById("lowerstarinput").value;
+    let upperStars = document.getElementById("upperstarinput").value;
+    let lowerForks = document.getElementById("lowerforkvalue").value;
+    let upperForks = document.getElementById("upperforkvalue").value;
+    let db = require("./../database/repoDB.json.txt");
+    console.log(db);
+  };
+  //folde
   //folds active_languages
   let active_languages = {
     "assembly": 1,
@@ -81,24 +105,30 @@ const Search = () => {
   //folds mainhtml
   return (
     <>
-      <div class="container-search">
+      <div className="container-search">
         <div id="stars">
           <StarSlider />
+        </div>
+        <div id="forks">
           <ForkInput />
         </div>
       </div>
-      <div class="container-main"></div>
-      <div class="container-language">
+      <div className="container-main">
+        <button id="submitsearch" onClick={handleSearch}>
+          Search
+        </button>
+      </div>
+      <div className="container-language">
         {/*//folds languagebuttons*/}
         <button
           id="langall"
-          class="langbutton"
+          className="langbutton"
           onClick={() => updateLang(active_languages, "all_langs")}
         >
           Toggle All
         </button>
         <button
-          class="langbutton"
+          className="langbutton"
           id="assembly"
           onClick={() => updateLang(active_languages, "assembly")}
         >
@@ -106,161 +136,161 @@ const Search = () => {
         </button>
         <button
           onClick={() => updateLang(active_languages, "bash")}
-          class="langbutton"
+          className="langbutton"
           id="bash"
         >
           Bash
         </button>
         <button
           onClick={() => updateLang(active_languages, "c")}
-          class="langbutton"
+          className="langbutton"
           id="c"
         >
           C
         </button>
         <button
           onClick={() => updateLang(active_languages, "c++")}
-          class="langbutton"
+          className="langbutton"
           id="c++"
         >
           C++
         </button>
         <button
           onClick={() => updateLang(active_languages, "c#")}
-          class="langbutton"
+          className="langbutton"
           id="c#"
         >
           C#
         </button>
         <button
           onClick={() => updateLang(active_languages, "elixir")}
-          class="langbutton"
+          className="langbutton"
           id="elixir"
         >
           Elixir
         </button>
         <button
           onClick={() => updateLang(active_languages, "go")}
-          class="langbutton"
+          className="langbutton"
           id="go"
         >
           Go
         </button>
         <button
           onClick={() => updateLang(active_languages, "java")}
-          class="langbutton"
+          className="langbutton"
           id="java"
         >
           Java
         </button>
         <button
           onClick={() => updateLang(active_languages, "javascript")}
-          class="langbutton"
+          className="langbutton"
           id="javascript"
         >
           Javascript
         </button>
         <button
           onClick={() => updateLang(active_languages, "julia")}
-          class="langbutton"
+          className="langbutton"
           id="julia"
         >
           Julia
         </button>
         <button
           onClick={() => updateLang(active_languages, "lua")}
-          class="langbutton"
+          className="langbutton"
           id="lua"
         >
           Lua
         </button>
         <button
           onClick={() => updateLang(active_languages, "objective-c")}
-          class="langbutton"
+          className="langbutton"
           id="objective-c"
         >
           Objective C
         </button>
         <button
           onClick={() => updateLang(active_languages, "pearl")}
-          class="langbutton"
+          className="langbutton"
           id="pearl"
         >
           PEARL
         </button>
         <button
           onClick={() => updateLang(active_languages, "php")}
-          class="langbutton"
+          className="langbutton"
           id="php"
         >
           PHP
         </button>
         <button
           onClick={() => updateLang(active_languages, "powershell")}
-          class="langbutton"
+          className="langbutton"
           id="powershell"
         >
           PowerShell
         </button>
         <button
           onClick={() => updateLang(active_languages, "python")}
-          class="langbutton"
+          className="langbutton"
           id="python"
         >
           Python
         </button>
         <button
           onClick={() => updateLang(active_languages, "ruby")}
-          class="langbutton"
+          className="langbutton"
           id="ruby"
         >
           Ruby
         </button>
         <button
           onClick={() => updateLang(active_languages, "rust")}
-          class="langbutton"
+          className="langbutton"
           id="rust"
         >
           Rust
         </button>
         <button
           onClick={() => updateLang(active_languages, "scala")}
-          class="langbutton"
+          className="langbutton"
           id="scala"
         >
           Scala
         </button>
         <button
           onClick={() => updateLang(active_languages, "sql")}
-          class="langbutton"
+          className="langbutton"
           id="sql"
         >
           SQL
         </button>
         <button
           onClick={() => updateLang(active_languages, "swift")}
-          class="langbutton"
+          className="langbutton"
           id="swift"
         >
           Swift
         </button>
         <button
           onClick={() => updateLang(active_languages, "typescript")}
-          class="langbutton"
+          className="langbutton"
           id="typescript"
         >
           TypeScript
         </button>
         <button
           onClick={() => updateLang(active_languages, "vimscript")}
-          class="langbutton"
+          className="langbutton"
           id="vimscript"
         >
           VimScript
         </button>
         <button
           onClick={() => updateLang(active_languages, "xml")}
-          class="langbutton"
+          className="langbutton"
           id="xml"
         >
           XML

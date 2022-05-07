@@ -1,6 +1,4 @@
-**/.git
-**/.svn
-**/.hg
-**/node_modules
-**/python-functions
-**/bundle
+node_modules/
+python-functions/
+bundle/
+web/database/
