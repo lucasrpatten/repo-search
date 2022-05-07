@@ -10,7 +10,6 @@ function valuetext(value) {
   return `${value}`;
 }
 
-
 function calcValue(value) {
   return Math.round(1.000105535 ** value);
 }
@@ -50,12 +49,13 @@ export default function StarSlider() {
     <Box>
       <div
         style={{
-          "color": "#ecd347",
-          "font-size": "3.5vw",
-          "marginLeft": "auto",
-          "marginRight": "auto",
-          "position": "relative",
-          "left": "2.1vw",
+          color: "#ecd347",
+          fontSize: "3.5vw",
+          marginLeft: "auto",
+          marginRight: "auto",
+          position: "relative",
+          left: "2.1vw",
+          userSelect: "none",
         }}
       >
         Star Range
@@ -69,12 +69,13 @@ export default function StarSlider() {
           onChange={handleChange}
           valueLabelDisplay="off"
           style={{
-            "marginLeft": "2.4vw",
-            "marginTop": "10px",
-            "color": "rgba(200, 200, 220, .4)",
-            "background": "darkgrey",
-            "border-radius": "50px",
-            "width": "15vw",
+            marginLeft: "2.4vw",
+            marginTop: "10px",
+            color: "rgba(200, 200, 220, .4)",
+            background: "darkgrey",
+            borderRadius: "50px",
+            width: "15vw",
+            userSelect: "none",
           }}
         />
       </Box>
@@ -83,17 +84,17 @@ export default function StarSlider() {
           id={"lowerstarinput"}
           value={value[0]}
           style={{
-            "width": "70px",
-            "position": "absolute",
-            "right": "10vw",
-            "background": "transparent",
-            "borderRadius": "12px",
-            "border": "solid 1px #706e31",
-            "marginTop": "5px",
-            "marginLeft": "10px",
-            "marginRight": "0px",
-            "color": "rgba(104, 235, 104, .9)",
-            "marginRight": "4px" /*remove up and down arrows later, idk how */,
+            width: "70px",
+            position: "absolute",
+            right: "10vw",
+            background: "transparent",
+            borderRadius: "12px",
+            border: "solid 1px #706e31",
+            marginTop: "5px",
+            marginLeft: "10px",
+            marginRight: "0px",
+            color: "rgba(104, 235, 104, .9)",
+            marginRight: "4px" /*remove up and down arrows later, idk how */,
           }}
           onChange={lowerInputChange}
           disableUnderline
@@ -114,18 +115,18 @@ export default function StarSlider() {
           value={value[1]}
           disableUnderline
           style={{
-            "width": "70px",
-            "position": "absolute",
-            "float": "right",
-            "left": "10vw",
-            "background": "transparent",
-            "borderRadius": "12px",
-            "border": "solid 1px #706e31",
-            "marginTop": "5px",
-            "marginLeft": "0px",
-            "margin-right": "10px",
-            "color": "rgba(104, 235, 104, .9)",
-            "marginLeft": "4px" /*remove up and down arrows later, idk how */,
+            width: "70px",
+            position: "absolute",
+            float: "right",
+            left: "10vw",
+            background: "transparent",
+            borderRadius: "12px",
+            border: "solid 1px #706e31",
+            marginTop: "5px",
+            marginLeft: "0px",
+            marginRight: "10px",
+            color: "rgba(104, 235, 104, .9)",
+            marginLeft: "4px" /*remove up and down arrows later, idk how */,
           }}
           onChange={upperInputChange}
           onBlur={handleBlur}
