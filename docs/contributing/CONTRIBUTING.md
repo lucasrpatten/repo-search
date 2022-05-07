@@ -7,4 +7,4 @@
 - [**Naming Conventions(i)**](naming-conventions.md) - Make sure you take a look over these before you start - we try to keep our conventions consistent, as it is easier all around.<br>
 - [**Formatting Conventions(i)**](formatting-conventions) - Have a look at the formatting conventions, and make sure to follow them while you add to search engine.
 <br><br><br>
-**[Automations]**(automations.md) - Programs to automate certain tasks
+**[Automations](automations.md)** - Programs to automate certain tasks
