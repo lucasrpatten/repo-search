@@ -10,7 +10,7 @@ The GitHub Repo Search Engine is an engine used to find repos for those of all l
 
 ## Why?
 
-When you are just starting programming, one of the best ways to build skills is to help on open source projects. These projects will teach you many skills that have real job application or useful program methods and implementations. Alongside this, experts will be able to help out beginners with the more technological aspects of their programs - as this engine brings to light many less advertised repos, that will now be more likely to be discoverd. With this engine, a greater diversity of repos will receive assistance, and beginners and experts alike will benefit.
+This engine will increase the likelihood of small projects being found - many (now) small (as in not well known) projects on github have enormous potential - they just aren't found, due to the nature of the github search engine. These projects will have a higher likeliehood of being discovered and expanded on with this search engine. This engine also has more filters than the GitHub search engine, resulting in more of an ease in finding applicable projects, that fit your skill set, to contribute to.
 
 ## Setup
 
