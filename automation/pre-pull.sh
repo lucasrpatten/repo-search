@@ -1,0 +1,1 @@
+bash pretty-js.sh

@@ -3,7 +3,7 @@ import math
 import time
 
 
-repodb = open('../../web/database/repoDB.json', 'a+')
+repodb = open('../../database/repoDB.json', 'a+')
 
 SEARCHSET="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 PER_PAGE=100

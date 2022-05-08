@@ -10,7 +10,7 @@ import { styled } from "@mui/material/styles";
 
 import $ from "jquery";
 
-export default function ForkInput() {
+const ForkInput = () => {
   const [position, setPosition] = useState([0, 10000]);
   const [circleState, setCircleState] = useState([
     "rgba(164,249,196,0.3)",
@@ -200,4 +200,5 @@ export default function ForkInput() {
       </div>
     </>
   );
-}
+};
+export default ForkInput;

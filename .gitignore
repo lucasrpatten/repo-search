@@ -1,1 +1,7 @@
 *.swp
+*_.*
+_.*
+venv/
+node_modules/
+package-lock.json
+

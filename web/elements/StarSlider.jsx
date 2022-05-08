@@ -6,15 +6,15 @@ import Slider from "@mui/material/Slider";
 import MuiInput from "@mui/material/Input";
 import { styled } from "@mui/material/styles";
 
-function valuetext(value) {
+const valuetext = (value) => {
   return `${value}`;
-}
+};
 
-function calcValue(value) {
+const calcValue = (value) => {
   return Math.round(1.000105535 ** value);
-}
+};
 
-export default function StarSlider() {
+const StarSlider = () => {
   const [value, setValue] = React.useState([0, 110000]);
 
   const handleChange = (event, newValue) => {
@@ -141,4 +141,5 @@ export default function StarSlider() {
       </Box>
     </Box>
   );
-}
+};
+export default StarSlider;
