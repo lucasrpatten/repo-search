@@ -37,3 +37,4 @@ Run the following commands :</br>
 `pip3 install requirements.txt`</br>
 
 **To contribute**
+Read the [docs on contributing](docs/index.md)
