@@ -10,7 +10,7 @@ The GitHub Repo Search Engine is an engine used to find repos for those of all l
 
 ## Why?
 
-This engine will increase the likelihood of small projects being found - many (now) small (as in not well known) projects on github have enormous potential - they just aren't found, due to the nature of the github search engine. These projects will have a higher likeliehood of being discovered and expanded on with this search engine. This engine also has more filters than the GitHub search engine, resulting in more of an ease in finding applicable projects, that fit your skill set, to contribute to.
+This engine will increase the likelihood of small projects being found - many (currrently) small (as in not well known) projects on github have enormous potential - they just aren't found, due to the nature of the github search engine. These projects will have a higher likeliehood of being discovered and expanded on with this search engine. This engine also has more filters than the GitHub search engine, resulting in more of an ease in finding applicable projects, that fit your skill set, to contribute to.
 
 ## Setup
 
