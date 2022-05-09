@@ -64,6 +64,8 @@ body {
 
 .langbutton {
   float: right;
+  position: relative;
+  float: top;
   margin-right: 1.8%;
   min-width: 76px;
   min-height: 50px;
@@ -89,6 +91,7 @@ body {
 #langall {
   margin-bottom: 20px;
   background-color: rgba(150, 150, 150, 0.7);
+  margin-top: 40px;
 }
 
 #stars {
@@ -145,7 +148,7 @@ body {
 }
 .resultName {
   position: relative;
-  color: yellow;
+  color: #ffff4c;
   font-size: 2.3vw;
   text-align: left;
 }
@@ -165,8 +168,9 @@ body {
 }
 .ownerName{
   position: relative;
-  color: lightblue;
+  color: #add8e6;
   font-size: 1.4vw;
   float: right;
   margin-right: 2%;
 }
+

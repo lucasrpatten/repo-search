@@ -4,4 +4,5 @@ _.*
 venv/
 node_modules/
 package-lock.json
-
+*.swo
+*.swn
