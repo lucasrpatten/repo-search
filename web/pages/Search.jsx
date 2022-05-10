@@ -142,7 +142,6 @@ const Search = () => {
   const [starRange, updateStarRange] = useState(0, 110000);
   const [forks, updateForks] = useState(0, 10000);
   const [results, setResults] = useState([]);
-
   const searchResults = (filtered) => {
     // for i in filtered results do
     setResults(results.concat(
@@ -155,7 +154,14 @@ const Search = () => {
     //for (let i = 0; i < 11; i++) {
       //}
   }
-
+  const switchEnabled = (event) => {
+    if (event.target.value == '') {
+        setEnabled(false);
+    }
+      else {
+          setEnabled(true);
+      }
+  }
     //folds handleSearch
   const handleSearch = () => {
     let selectedLangs = [];
@@ -196,11 +202,11 @@ const Search = () => {
               <button id="submitsearch" onClick={handleSearch} >
           Search
         </button>
-      <div className="containerMain">
+      <div className="containerMain" id="containerMain">
         {results}
       </div>
-      <LanguageSearch />
-      <div className="containerLanguage">
+      <LanguageSearch/>
+      <div className="containerLanguage" id="containerLanguage">
         
         <LanguageButtons />
       </div>

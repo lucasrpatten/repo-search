@@ -4,6 +4,7 @@ import { active_languages, SendLangs } from "./../active_languages.jsx";
         //let active_languages = this.props.activeLangs;
   //folds updateLang
   const updateLang = (dictionary, language) => {
+
     if (language == "all_langs") {
       if (Object.values(dictionary).includes(1)) {
         let keys = Object.keys(dictionary);
