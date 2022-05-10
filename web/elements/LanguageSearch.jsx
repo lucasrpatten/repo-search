@@ -28,6 +28,8 @@ const updateResults = (event) => {
     document.getElementById('langall').style.display='initial';
 document.getElementById('containerMain').style.display='initial';
 document.getElementById('containerLanguage').style.width='';
+document.getElementById('submitsearch').style.right='';
+
 setTimeout(function(){document.getElementById('containerLanguage').style.transitionDuration = '0s';},400);
   }
   else {
@@ -38,13 +40,15 @@ setTimeout(function(){document.getElementById('containerLanguage').style.transit
 document.getElementById('containerLanguage').style.transitionDuration = '.4s';
 
 document.getElementById('containerLanguage').style.width='79vw';
+      document.getElementById('submitsearch').style.right='2vw';
 
   }
   for (let i = 0; i < keys.length; i++) {
     let key = keys[i]
+    let values =  Object.values(active_languages)
 let element = document.getElementById(key);
-
-    if (key.includes(search)) {
+    let value = values[i][1].toLowerCase;
+    if (key.includes(search) || value.includes(search)) {
       element.attributeStyleMap.clear();
     }
     else {

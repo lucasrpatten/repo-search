@@ -207,7 +207,6 @@ const Search = () => {
       </div>
       <LanguageSearch/>
       <div className="containerLanguage" id="containerLanguage">
-        
         <LanguageButtons />
       </div>
       <Link to='./../../docs/index.md'>test</Link>
