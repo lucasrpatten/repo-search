@@ -4,7 +4,7 @@
   "description": "A search engine for both beginners and experts to find git repos to contribute to.",
   "main": "web/js/main.jsx",
   "scripts": {
-    "build": "npx webpack --config webpack.prod.js && npm run minify",
+    "build": "rm -r ./bundle && npx webpack --config webpack.prod.js && npm run minify",
     "prettyjs": "bash ./automation/pretty-js.sh",
     "dev": "npx webpack serve --open --stats-error-details --config webpack.dev.js",
     "predeploy": "npm run build",

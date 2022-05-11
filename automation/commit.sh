@@ -1,5 +1,5 @@
-npm run prettyjs && npm run deploy
-git add .
+npm run prettyjs
+npm run deploy && git add .
 git status
 echo 'commit? (y/n)'
 read

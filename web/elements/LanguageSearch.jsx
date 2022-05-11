@@ -29,6 +29,10 @@ const LanguageSearch = () => {
       document.getElementById("submitsearch").style.right = "";
 
       setTimeout(function () {
+        document.getElementById("all").style.display = "initial";
+        document.getElementById("pop").style.display = "initial";
+      }, 300);
+      setTimeout(function () {
         document.getElementById("containerLanguage").style.transitionDuration =
           "0s";
       }, 400);
@@ -42,13 +46,15 @@ const LanguageSearch = () => {
 
       document.getElementById("containerLanguage").style.width = "79vw";
       document.getElementById("submitsearch").style.right = "2vw";
+      document.getElementById("all").style.display = "none";
+      document.getElementById("pop").style.display = "none";
     }
     let currentValue;
     let values = Object.values(active_languages);
     for (let i = 0; i < keys.length; i++) {
       let key = keys[i];
 
-      currentValue = values[i][1].toLowerCase();
+      currentValue = values[i].toLowerCase();
       let element = document.getElementById(key);
       if (key.includes(search) || currentValue.includes(search)) {
         element.attributeStyleMap.clear();

@@ -2,50 +2,102 @@ import React, { useState } from "react";
 import { active_languages, SendLangs } from "./../active_languages.jsx";
 
 const updateLang = (dictionary, language) => {
+  let keys = Object.keys(dictionary);
+  let _active = 1;
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
+    let activeEl = document.getElementById(key);
+    if (activeEl.style.background == "transparent") {
+      _active = 0;
+    }
+  }
   if (language == "all_langs") {
-    if (Object.values(dictionary).includes(1)) {
-      let keys = Object.keys(dictionary);
+    if (_active != 0) {
       for (let i = 0; i < keys.length; i++) {
         let key = keys[i];
-        dictionary[key][0] = 0;
         document.getElementById(key).style.background = "transparent";
       }
     } else {
       let keys = Object.keys(dictionary);
       for (let i = 0; i < keys.length; i++) {
         let key = keys[i];
-        dictionary[key] = 1;
         document.getElementById(key).style.background =
           "rgba(120, 120, 120, .2)";
       }
     }
   } else {
-    if (dictionary[language] == 0) {
-      dictionary[language] = 1;
+    if (document.getElementById(language).style.background == "transparent") {
       document.getElementById(language).style.background =
         "rgba(120, 120, 120, .2)";
     } else {
-      dictionary[language] = 0;
       document.getElementById(language).style.background = "transparent";
     }
   }
-  SendLangs(dictionary);
 }; //folde updateLang
 
 const LanguageButtons = (props) => {
+  const [invisible, setInvisible] = useState("none");
   let Buttons = [];
   const languages = Object.keys(active_languages);
   const last_popular = languages.indexOf("typescript"); // Manually Update if you add more popular languages after typescript
   let Class;
   //let active_languages = this.props.activeLangs;
   //folds updateLang
+  const hideAll = () => {
+    for (
+      let i = languages.indexOf("typescript") + 1;
+      i < languages.length;
+      i++
+    ) {
+      let langID = languages[i];
+      document.getElementById(langID).style.display = "none";
+    }
+  };
+  const showAll = () => {
+    for (
+      let i = languages.indexOf("typescript") + 1;
+      i < languages.length;
+      i++
+    ) {
+      let langID = languages[i];
+      document.getElementById(langID).style.display = "initial";
+    }
+  };
+  const toggleNotPop = () => {
+    if (document.getElementById("basic").style.display != "none") {
+      //I'm sure basic will be around
+      hideAll();
+    } else {
+      showAll();
+    }
+  };
+  const hidePop = () => {
+    for (let i = 0; i < languages.indexOf("typescript") + 1; i++) {
+      let langID = languages[i];
+      document.getElementById(langID).style.display = "none";
+    }
+  };
+  const showPop = () => {
+    for (let i = 0; i < languages.indexOf("typescript") + 1; i++) {
+      let langID = languages[i];
+      document.getElementById(langID).style.display = "initial";
+    }
+  };
+  const togglePop = () => {
+    if (document.getElementById("c++").style.display == "none") {
+      //I'm sure basic will be around
+      showPop();
+    } else {
+      hidePop();
+    }
+  };
   (function () {
     for (let i = 0; i < languages.length; i++) {
       let langID = languages[i];
 
       if (i - 1 == last_popular) {
         Buttons.push(
-          <div className="all">
+          <div className="all" key={"all"} id="all" onClick={toggleNotPop}>
             <u>*All Languages*</u>
           </div>
         );
@@ -62,7 +114,7 @@ const LanguageButtons = (props) => {
           className={Class}
           key={langID}
         >
-          {Object.values(active_languages)[languages.indexOf(langID)][1]}
+          {Object.values(active_languages)[i]}
         </button>
       );
     }
@@ -77,7 +129,7 @@ const LanguageButtons = (props) => {
       >
         Toggle All
       </button>
-      <div className="pop">
+      <div className="pop" id="pop" onClick={togglePop}>
         <u>Popular Languages</u>
       </div>
       {Buttons}
