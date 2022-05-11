@@ -5,3 +5,4 @@ database/repoDB.json
 *.sw*
 *._*
 LICENSE
+.github/
