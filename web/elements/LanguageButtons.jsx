@@ -35,16 +35,31 @@ const updateLang = (dictionary, language) => {
 const LanguageButtons = (props) => {
   let Buttons = [];
   const languages = Object.keys(active_languages);
+  const last_popular = languages.indexOf("typescript"); // Manually Update if you add more popular languages after typescript
+  let Class;
   //let active_languages = this.props.activeLangs;
   //folds updateLang
   (function () {
     for (let i = 0; i < languages.length; i++) {
       let langID = languages[i];
+
+      if (i - 1 == last_popular) {
+        Buttons.push(
+          <div className="all">
+            <u>*All Languages*</u>
+          </div>
+        );
+        Class = "langbutton alllangbutton";
+      } else if (i > last_popular) {
+        Class = "langbutton alllangbutton";
+      } else {
+        Class = "langbutton poplangbutton";
+      }
       Buttons.push(
         <button
           id={langID}
           onClick={() => updateLang(active_languages, langID)}
-          className="langbutton"
+          className={Class}
           key={langID}
         >
           {Object.values(active_languages)[languages.indexOf(langID)][1]}
@@ -62,6 +77,9 @@ const LanguageButtons = (props) => {
       >
         Toggle All
       </button>
+      <div className="pop">
+        <u>Popular Languages</u>
+      </div>
       {Buttons}
     </>
   );

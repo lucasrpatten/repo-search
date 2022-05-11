@@ -98,6 +98,28 @@ body {
   width: 200px;
 }
 
+.pop {
+  color: #ffbd7b;
+  position: relative;
+  float: right;
+  float: top;
+  margin-right: 1vw;
+  font-size: 1.7vw;
+}
+
+.all {
+  color: #ffbd7b;
+  position: relative;
+  float: right;
+  float: top;
+  margin-right: 1.7vw;
+  font-size: 1.7vw;
+}
+
+.all:hover {
+  cursor: pointer;
+}
+
 #submitsearch {
   z-index: 1;
   width: 12vw;
