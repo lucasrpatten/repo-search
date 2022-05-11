@@ -1,4 +1,5 @@
 # Database Contributions
+
 **THE CURRENT DATABASE IS UNOFICIAL - WE MAY END UP USING JSON OR SQL, IT IS UNDECIDED AS WE DO NOT YET HAVE A BACKEND SERVER**<br><br>
 The database is the backbone of any search engine
 

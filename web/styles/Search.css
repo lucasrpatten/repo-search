@@ -108,7 +108,7 @@ body {
   right: 18vw;
   bottom: 2vw;
   box-shadow: 0 0 10px 2px #61688b;
-  background: radial-gradient(#98e35b 0%, #45b649 100%);;
+  background: radial-gradient(#98e35b 0%, #45b649 100%);
   transition-duration: 0.4s;
   color: #f7a748;
   text-shadow: 0 0 2px black;
@@ -152,7 +152,7 @@ body {
   font-size: 2.3vw;
   text-align: left;
 }
-.resultName a{
+.resultName a {
   color: inherit;
 }
 .resultID {
@@ -162,15 +162,14 @@ body {
   margin-right: 2%;
   font-size: 1.4vw;
 }
-.resultOwner img{
+.resultOwner img {
   width: 8%;
   border-radius: 50%;
 }
-.ownerName{
+.ownerName {
   position: relative;
   color: #add8e6;
   font-size: 1.4vw;
   float: right;
   margin-right: 2%;
 }
-

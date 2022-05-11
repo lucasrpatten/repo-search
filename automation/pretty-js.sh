@@ -1,6 +1,6 @@
 #!/bin/bash
-cd ..
-npx prettier --check .
+BASEDIR=$(dirname $0)
+npx prettier --check $BASEDIR/../.
 echo "Are there files to fix, and if so, would you like to do it automatically? (y/n)"
 read
 if [ "$REPLY" == "yes" ] || [ "$REPLY" == "y" ]
@@ -12,4 +12,3 @@ then
 else
   echo "Input Error - Allowed inputs are yes, no, y, and n"
 fi
-cd automation

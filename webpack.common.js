@@ -34,4 +34,8 @@ module.exports = {
       template: "./web/index.html",
     }),
   ],
+
+  optimization: {
+    usedExports: true,
+  },
 };
