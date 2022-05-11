@@ -1,5 +1,8 @@
+#!/bin/bash
 npm run prettyjs
-npm run deploy && git add .
+npm run deploy
+BASEDIR=$(dirname $0)
+git add BASEDIR/../.
 git status
 echo 'commit? (y/n)'
 read

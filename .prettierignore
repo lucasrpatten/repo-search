@@ -1,7 +1,7 @@
 node_modules/
 python-functions/
 bundle/
-database/
+database/repoDB.json
 *.sw*
 *._*
 LICENSE
