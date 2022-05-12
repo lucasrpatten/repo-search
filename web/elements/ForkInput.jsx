@@ -8,8 +8,6 @@ import { styled } from "@mui/material/styles";
 
 //folde
 
-import $ from "jquery";
-
 const ForkInput = () => {
   const [position, setPosition] = useState([0, 10000]);
   const [circleState, setCircleState] = useState([
