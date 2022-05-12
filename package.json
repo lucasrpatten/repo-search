@@ -4,13 +4,13 @@
   "description": "A search engine for both beginners and experts to find git repos to contribute to.",
   "main": "web/js/main.jsx",
   "scripts": {
-    "build": "npx webpack --config webpack.prod.js && npm run minify",
+    "build": "npx webpack --config webpack.prod.js || npm run minify",
     "prettyjs": "bash ./automation/pretty-js.sh",
     "dev": "npx webpack serve --open --stats-error-details --config webpack.dev.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d bundle",
     "minify": "uglifyjs ./bundle/* --mangle --compress ",
-    "commit": "rm -r ./bundle ||  bash ./automation/commit.sh"
+    "commit": "rm -r ./bundle || bash ./automation/commit.sh"
   },
   "repository": {
     "type": "git",
