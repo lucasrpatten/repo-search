@@ -3,7 +3,7 @@ For documentation purposes, the comments //folds and //folde are my custom vim f
 */
 //folds imports
 import React, { useState, Suspense } from "react";
-import { Outlet, Link, Switch } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import "../styles/Search.css";
 import { active_languages, SendLangs } from "./../active_languages.jsx";
 //folde
@@ -16,6 +16,7 @@ const LanguageButtons = React.lazy(() =>
 );
 const ForkInput = React.lazy(() => import("./../elements/ForkInput.jsx"));
 const StarSlider = React.lazy(() => import("./../elements/StarSlider.jsx"));
+const SearchNavBar = React.lazy(() => import("./../elements/SearchNavBar.jsx"));
 //folde
 
 //folds Main
@@ -262,6 +263,7 @@ const Search = () => {
         Search
       </button>
       <div className="containerMain" id="containerMain">
+        <SearchNavBar />
         {results}
       </div>
       <div>
@@ -272,6 +274,7 @@ const Search = () => {
       <div className="containerLanguage" id="containerLanguage">
         <LanguageButtons />
       </div>
+      <Outlet />
     </>
   );
 };

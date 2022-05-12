@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrepo_search=self.webpackChunkrepo_search||[]).push([[870],{2870:(e,o,r)=>{r.r(o),r.d(o,{default:()=>n}),r(7294);var t=r(9711),i=r(5893);const n=function(){return(0,i.jsx)("div",{style:{position:"absolute",float:"left",width:"100%",height:"5vw",backgroundColor:"#81d681"},children:(0,i.jsx)(t.rU,{style:{position:"relative",color:"purple",textDecoration:"none",top:"1vw",borderRadius:"200px",backgroundColor:"green"},to:"./verify-repo",children:"Verify Repo"})})}}}]);
+//# sourceMappingURL=870.bundle.js.map

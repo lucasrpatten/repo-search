@@ -1,3 +1,5 @@
+/* DO NOT INCLUDE MORE CSS HERE - we are switching to javascript objects for styling */
+
 body {
   background-color: #505356;
   overflow: hidden;
