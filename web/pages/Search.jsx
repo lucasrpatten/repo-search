@@ -4,8 +4,9 @@ For documentation purposes, the comments //folds and //folde are my custom vim f
 //folds imports
 import React, { useState, Suspense } from "react";
 import { Outlet, Link } from "react-router-dom";
-import "../styles/Search.css";
+//import "../styles/Search.css";
 import { active_languages, SendLangs } from "./../active_languages.jsx";
+import { body } from "./../styles/style.Search.js";
 //folde
 ////folds loading
 const LanguageSearch = React.lazy(() =>

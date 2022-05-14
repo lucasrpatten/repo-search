@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx webpack --config webpack.prod.js || npm run minify",
     "prettyjs": "bash ./automation/pretty-js.sh",
-    "dev": "npx webpack serve --open --stats-error-details --config webpack.dev.js",
+    "dev": "npx webpack serve --open --config webpack.dev.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d bundle",
     "minify": "uglifyjs ./bundle/* --mangle --compress ",
