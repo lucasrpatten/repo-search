@@ -5,20 +5,16 @@ For documentation purposes, the comments //folds and //folde are my custom vim f
 import React, { useState, Suspense } from "react";
 import { Outlet, Link } from "react-router-dom";
 //import "../styles/Search.css";
-import { active_languages, SendLangs } from "./../active_languages.jsx";
-import { styleSearch } from "./../styles/style.Search.js";
-import setPageStyle from "./../functions/setPageStyle.jsx";
+import { active_languages, SendLangs } from "./active_languages.jsx";
+import { styleSearch } from "./styles/style.Search.js";
+import setPageStyle from "./../../functions/setPageStyle.jsx";
 //folde
 ////folds loading
-const LanguageSearch = React.lazy(() =>
-  import("./../elements/LanguageSearch.jsx")
-);
-const LanguageButtons = React.lazy(() =>
-  import("./../elements/LanguageButtons.jsx")
-);
-const ForkInput = React.lazy(() => import("./../elements/ForkInput.jsx"));
-const StarSlider = React.lazy(() => import("./../elements/StarSlider.jsx"));
-const SearchNavBar = React.lazy(() => import("./../elements/SearchNavBar.jsx"));
+const LanguageSearch = React.lazy(() => import("./elements/LanguageSearch.jsx"));
+const LanguageButtons = React.lazy(() => import("./elements/LanguageButtons.jsx"));
+const ForkInput = React.lazy(() => import("./elements/ForkInput.jsx"));
+const StarSlider = React.lazy(() => import("./elements/StarSlider.jsx"));
+const SearchNavBar = React.lazy(() => import("./elements/SearchNavBar.jsx"));
 //folde
 
 //folds Main

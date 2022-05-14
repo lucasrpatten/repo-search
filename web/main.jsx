@@ -6,7 +6,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Search from "./pages/Search.jsx";
+import Search from "./pages/Search/Search.jsx";
 import VerifyRepo from "./pages/VerifyRepo.jsx";
 export default function App() {
   return (
