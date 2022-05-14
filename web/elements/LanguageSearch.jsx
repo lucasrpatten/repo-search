@@ -2,7 +2,6 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import { active_languages } from "./../active_languages.jsx";
 
-
 let _enabled;
 const LanguageSearch = () => {
   const SearchBar = styled("input")({

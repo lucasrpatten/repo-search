@@ -6,7 +6,8 @@ import React, { useState, Suspense } from "react";
 import { Outlet, Link } from "react-router-dom";
 //import "../styles/Search.css";
 import { active_languages, SendLangs } from "./../active_languages.jsx";
-import { body } from "./../styles/style.Search.js";
+import { styleSearch } from "./../styles/style.Search.js";
+import setPageStyle from "./../functions/setPageStyle.jsx";
 //folde
 ////folds loading
 const LanguageSearch = React.lazy(() =>
@@ -211,16 +212,6 @@ const Search = () => {
   };
   //folde searchResults
 
-  //folds switchEnabled
-  const switchEnabled = (event) => {
-    if (event.target.value == "") {
-      setEnabled(false);
-    } else {
-      setEnabled(true);
-    }
-  };
-  //folde switchEnabled
-
   //folds handleSearch
   const handleSearch = () => {
     let selectedLangs = [];
@@ -243,6 +234,10 @@ const Search = () => {
     return searchResults(fakeData);
   };
   //folde handleSearch//folde javascript
+
+  (function () {
+    setPageStyle(styleSearch);
+  })();
 
   //folds mainhtml
   return (

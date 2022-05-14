@@ -1,6 +1,217 @@
-const body = {
-  "background-color": "#505356",
-  "overflow": "hidden"
+const styleSearch =
+  // syntax for body
+  `
+body {
+  background-color: #505356;
+  overflow: hidden;
 }
 
-export { body }
+.containerMain {
+  position: absolute;
+  top: 5px;
+  width: 63%;
+  height: 100vh;
+  max-height: calc(100% - 10px);
+  overflow-x: scroll;
+  overflow-y: scroll;
+  background: #1b1c17;
+  border-left: solid #747576;
+  border-right: solid #747576;
+  margin-left: calc(0.3% + 20% + 1px);
+}
+
+.containerSearch {
+  position: absolute;
+  left: 0.3%;
+  top: 5px;
+  min-width: 120px;
+  width: 20%;
+  background: #1b1c17;
+  max-height: calc(100% - 10px);
+  height: 100vh;
+  border-left: solid #747576;
+  border-right: solid #747576;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.containerSearch::-webkit-scrollbar {
+  display: none;
+}
+
+.containerLanguage {
+  position: fixed;
+  right: 0.3%;
+  top: 5px;
+  min-width: 80px;
+  width: 15%;
+  max-height: calc(100% - 10px);
+  margin-bottom: 10px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #1b1c17;
+  -ms-overflow-style: none; /*IE and Edge no scrollbar*/
+  scrollbar-width: none; /*firefox no scrollbar*/
+  border-left: solid #747576;
+  border-right: solid #747576;
+  cursor: cell;
+  user-select: none;
+}
+
+/*no scrollbar Chrome, Safari and Opera*/
+.containerLanguage::-webkit-scrollbar {
+  display: none;
+}
+
+.langbutton {
+  float: right;
+  position: relative;
+  float: top;
+  margin-right: 1.8%;
+  min-width: 76px;
+  min-height: 50px;
+  margin-top: 10px;
+  width: 96%;
+  height: 10%;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: rgba(120, 120, 120, 0.2);
+  color: rgb(225, 152, 10);
+  border: 1px solid #696969;
+  text-shadow: -1px 1px 5px black;
+  cursor: cell;
+  user-select: none;
+  border-radius: 3px;
+}
+
+.langbutton:hover {
+  font-size: 1.5em;
+  border: 2px solid #979796;
+}
+
+#langall {
+  margin-bottom: 20px;
+  background-color: rgba(150, 150, 150, 0.7);
+  margin-top: 40px;
+}
+
+#stars {
+  width: 200px;
+}
+
+.pop {
+  color: #ffbd7b;
+  position: relative;
+  float: right;
+  float: top;
+  margin-right: 1vw;
+  font-size: 1.7vw;
+}
+
+.pop:hover {
+  cursor: pointer;
+}
+
+.all {
+  color: #ffbd7b;
+  position: relative;
+  float: right;
+  float: top;
+  margin-right: 1.7vw;
+  margin-top: 25px;
+  font-size: 1.7vw;
+  padding-bottom: 15px;
+}
+
+.all:hover {
+  cursor: pointer;
+}
+
+#submitsearch {
+  z-index: 1;
+  width: 12vw;
+  height: 4vw;
+  border-radius: 30px;
+  border: none;
+  position: absolute;
+  right: 18vw;
+  bottom: 2vw;
+  box-shadow: 0 0 10px 2px #61688b;
+  background: radial-gradient(#98e35b 0%, #45b649 100%);
+  transition-duration: 0.4s;
+  color: #f7a748;
+  text-shadow: 0 0 2px black;
+  font-size: 2vw;
+}
+
+#submitsearch:hover {
+  box-shadow: 0 0 30px 3px #1b2247;
+  transition-duration: 0.4s;
+  background: radial-gradient(#dce35b 0%, #45b649 100%);
+  cursor: pointer;
+}
+
+#submitsearch:active {
+  animation: createBox 1s;
+  animation-iteration-count: 1;
+  transition-duration: 0.3s;
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+
+.results {
+  width: 95%;
+  background: #57585a;
+  margin-top: 15px;
+  margin-left: 2.4%;
+  height: 100px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 1px #bdbdbd;
+}
+
+.resultName {
+  position: relative;
+  color: #ffff4c;
+  font-size: 2.3vw;
+  text-align: left;
+}
+
+.resultName a {
+  color: inherit;
+}
+
+.resultID {
+  position: relative;
+  color: #ecd347;
+  float: right;
+  margin-right: 2%;
+  font-size: 1.4vw;
+}
+
+.resultOwner img {
+  width: 8%;
+  border-radius: 50%;
+}
+
+.ownerName {
+  position: relative;
+  color: #add8e6;
+  font-size: 1.4vw;
+  float: right;
+  margin-right: 2%;
+}
+
+.alllangbutton {
+  display: none;
+}
+`;
+export { styleSearch };
