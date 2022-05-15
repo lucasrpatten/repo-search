@@ -1,8 +1,10 @@
+import Theme from "./../../../themes/ActiveTheme.jsx";
+
 const styleSearch =
   // syntax for body
   `
 body {
-  background-color: #505356;
+  background-color: ${Theme.backgroundColor};
   overflow: hidden;
 }
 

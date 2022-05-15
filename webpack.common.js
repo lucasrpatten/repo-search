@@ -10,22 +10,14 @@ module.exports = {
     clean: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".css"],
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-      },
-      {
-        test: /\.txt$/,
-        use: "raw-loader",
       },
     ],
   },
